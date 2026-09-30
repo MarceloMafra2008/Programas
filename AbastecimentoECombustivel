@@ -1,3 +1,28 @@
+//1) Um posto de combustíveis está realizando descontos no litro do combustível, conforme a tabela:
+//Combustível	Quantidade de Litros	Desconto
+//Álcool(1)	De 10 até  20 litros	3%
+//Álcool(1)	Acima de 20 litros	    5%
+//Gasolina(2)	De 20 até 30 litros	    7%
+//Gasolina(2)	Acima de 30 litros	    8%
+
+//Você será o responsável por emitir a nota fiscal para o consumidor e nela deverá aparecer as seguintes informações:
+//-Tipo de Combustível 
+//- Quantidade de litros do abastecimento
+//- valor do litro sem desconto
+//- valor do desconto por litro
+//- valor do litro com o desconto
+//- valor total da nota a ser paga pelo cliente
+
+//O caixa do posto irá informar as informações necessárias para o processamento, tais como o tipo de combustível do abastecimento (1 – álcool e 2- gasolina), quantidade abastecida 
+//e o valor do litro do combustível abastecido.
+
+
+
+
+
+
+
+
 #include <stdio.h>
 #define preco 5
 int main()
