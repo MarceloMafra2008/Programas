@@ -1,0 +1,107 @@
+#include <stdio.h>
+#define preco 5
+int main()
+{
+    int tipo_comb;
+    float litros, valor, sem_desc, descpor_litro, litro_desc, desconto;
+    
+    printf("\n|Tipo de abastecimento|");
+    printf("\n|Alcool ou Gasolina|");
+    printf("\n|DIGITE 1 para Alcool|");
+    printf("\n|DIGITE 2 para Gasolina|");
+    
+    printf("\nInsira o tipo de combustivel:");
+    scanf("%d", &tipo_comb);
+    
+    while(tipo_comb<1 || tipo_comb>2)
+    {
+        printf("\nTipo de combustivel invalido!");
+        printf("\nInsira novamente o tipo de combustivel:");
+        scanf("%d", &tipo_comb);
+    }
+    switch(tipo_comb)
+    {
+        case 1: printf("Insira a quantidade de Litros");
+                scanf("%f", &litros);
+                while(litros<1)
+                {
+                    printf("VALOR INVALIDO!");
+                    printf("Digite novamente a quantidade de litros:");
+                    scanf("%f", &litros);
+                }
+                if(litros >= 10 || litros <= 20)
+                {
+                    valor=(litros*preco)*0.97; 
+                    sem_desc=preco;
+                    descpor_litro= litros*0.03;
+                    litro_desc= preco*0.97;
+                }
+                else
+                {
+                    if(litros>20)
+                    {
+                        valor=(litros*preco)*0.95;
+                        sem_desc=preco;
+                        descpor_litro=0.05*litros;
+                        litro_desc=preco*0.95;
+                    }
+                    else
+                    {
+                        valor=litros*preco;
+                        sem_desc=preco;
+                        descpor_litro=litros*0;
+                        litro_desc=preco;
+                    }
+                }
+                break;
+                
+        case 2: printf("Insira a quantidade de litros");
+                scanf("%f", &litros);
+                while(litros<1)
+                {
+                    printf("VAlOR INVALIDA");
+                    printf("Insira novamente a quantidade de litro:");
+                    scanf("%f", &litros);
+                    
+                    if(litros>=20 || litros<=30)
+                    {
+                        valor=(litros*preco)*0.93;
+                        sem_desc=preco;
+                        descpor_litro=litros*0.07;
+                        litro_desc=preco*0.93;
+                    }
+                    else
+                    {
+                        if(litros>30)
+                        {
+                            valor=(litros*preco)*0.92;
+                            sem_desc=preco;
+                            descpor_litro=litros*0.08;
+                            litro_desc=preco*0.92;
+                        }
+                        else
+                        {
+                            valor=litros*preco;
+                            sem_desc=preco;
+                            descpor_litro=litros*0;
+                            litro_desc=preco;
+                        }
+                    }
+                }
+                break;
+    }
+    printf("\nTabela || Menu");
+    if(tipo_comb == 1 )
+    {
+        printf("\nTIPO ALCOOL");
+    }
+    else
+    {
+        printf("\nTIPO GASOLINA");
+    }
+    printf("\nQuantidade de litros do abastecimento:%.2f", litros);
+    printf("\nValor sem desconto:%.2f", sem_desc);
+    printf("\nValor do desconto por litro:%.2f", descpor_litro);
+    printf("\nValor do litro com desconto:%.2f", litro_desc);
+    printf("\nTotal a pagar:%.2f", valor);
+}
