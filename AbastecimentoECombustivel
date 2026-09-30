@@ -1,7 +1,7 @@
 //1) Um posto de combustíveis está realizando descontos no litro do combustível, conforme a tabela:
 //Combustível	Quantidade de Litros	Desconto
-//Álcool(1)	De 10 até  20 litros	3%
-//Álcool(1)	Acima de 20 litros	    5%
+//Álcool(1)	De 10 até  20 litros	    3%
+//Álcool(1)	Acima de 20 litros	        5%
 //Gasolina(2)	De 20 até 30 litros	    7%
 //Gasolina(2)	Acima de 30 litros	    8%
 
